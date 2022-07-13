@@ -1,0 +1,28 @@
+{
+	"name": "lsr/docgen",
+	"type": "project",
+	"description": "Customizable documentation generator for PHP apps.",
+	"bin": [
+		"bin/docgen"
+	],
+	"autoload": {
+		"psr-4": {
+			"Lsr\\Doc\\": "src"
+		}
+	},
+	"authors": [
+		{
+			"name": "Tomáš Vojík",
+			"email": "vojik@wboy.cz"
+		}
+	],
+	"require-dev": {
+		"roave/security-advisories": "dev-latest",
+		"phpunit/phpunit": "^9.5"
+	},
+	"require": {
+		"latte/latte": "^3.0",
+		"php": ">=8.1",
+		"nette/neon": "^3.3"
+	}
+}

@@ -1,0 +1,62 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @file        bin/docgen
+ * @author      Tomáš Vojík <vojik@wboy.cz>
+ * @copyright   Tomáš Vojík <vojik@wboy.cz>
+ * @brief       Main input file to run the documentation generation.
+ * @declaration Some parts of this file were copied from phpunit https://github.com/sebastianbergmann/phpunit
+ */
+declare(strict_types=1);
+
+// Check extensions
+use Lsr\Doc\Command;
+
+foreach ([] as $extension) {
+	if (extension_loaded($extension)) {
+		continue;
+	}
+
+	fwrite(
+		STDERR,
+		sprintf(
+			'Docgen requires the "%s" extension.'.PHP_EOL,
+			$extension
+		)
+	);
+
+	die(1);
+}
+
+// Define a composer path
+if (isset($GLOBALS['_composer_autoload_path'])) {
+	define('LSR_DOCGEN_COMPOSER_INSTALL', $GLOBALS['_composer_autoload_path']);
+
+	unset($GLOBALS['_composer_autoload_path']);
+}
+else {
+	foreach (array(__DIR__.'/../../autoload.php', __DIR__.'/../vendor/autoload.php', __DIR__.'/vendor/autoload.php') as $file) {
+		if (file_exists($file)) {
+			define('LSR_DOCGEN_COMPOSER_INSTALL', $file);
+
+			break;
+		}
+	}
+}
+
+
+if (!defined('LSR_DOCGEN_COMPOSER_INSTALL')) {
+	fwrite(
+		STDERR,
+		'You need to set up the project dependencies using Composer:'.PHP_EOL.PHP_EOL.
+		'    composer install'.PHP_EOL.PHP_EOL.
+		'You can learn all about Composer on https://getcomposer.org/.'.PHP_EOL
+	);
+
+	die(1);
+}
+
+// Require the composer autoload
+require_once LSR_DOCGEN_COMPOSER_INSTALL;
+
+Command::start();
