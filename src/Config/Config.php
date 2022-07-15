@@ -19,6 +19,9 @@ class Config
 	/** @var string[] Source files or directories */
 	public array $sources = [];
 
+	/** @var string[] Filetypes to scan in source directories */
+	public array $fileExtensions = [];
+
 	/** @var string Output directory */
 	public string $output = '';
 

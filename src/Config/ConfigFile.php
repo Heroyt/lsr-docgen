@@ -83,6 +83,22 @@ class ConfigFile implements Configurator
 
 			$config->sources = $info['sources'];
 		}
+
+		if (empty($config->fileExtensions) && isset($info['extensions'])) {
+			// Handle conversion from string to array of strings
+			if (is_string($info['extensions'])) {
+				$info['extensions'] = [$info['extensions']];
+			}
+
+			// Validate
+			if (!is_array($info['extensions']) || !Arrays::every($info['extensions'], static function(mixed $value) : bool {
+					return is_string($value);
+				})) {
+				throw new InvalidConfigurationTypeException('Extensions must either be a string or an array of strings.');
+			}
+
+			$config->fileExtensions = $info['extensions'];
+		}
 	}
 
 	/**

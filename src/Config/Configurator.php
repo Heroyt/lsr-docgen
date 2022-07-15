@@ -2,6 +2,9 @@
 
 namespace Lsr\Doc\Config;
 
+/**
+ * Interface for all possible configuration sources
+ */
 interface Configurator
 {
 

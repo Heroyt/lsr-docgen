@@ -8,7 +8,9 @@ use Lsr\Doc\CliTools\Enums\TextAttributes;
 use Lsr\Doc\Config\CliArguments;
 use Lsr\Doc\Config\Config;
 use Lsr\Doc\Config\ConfigFile;
+use Lsr\Doc\Config\Configurator;
 use Lsr\Doc\Exceptions\ConfigurationException;
+use Lsr\Doc\Scan\FileScanner;
 
 class Command
 {
@@ -16,7 +18,11 @@ class Command
 	/** @var array<string, mixed> Parsed command line arguments */
 	protected array $arguments = [];
 
+	/** @var Config Parsed config from all config sources */
 	protected Config $config;
+
+	/** @var string[] All files to extract */
+	protected array $files = [];
 
 	/**
 	 * Input point for the command.
@@ -29,10 +35,15 @@ class Command
 		exit(0);
 	}
 
+	/**
+	 * Run the script
+	 *
+	 * @return void
+	 */
 	public function run() : void {
 		$this->prepareConfig();
+		$this->prepareFiles();
 
-		print_r($this->config);
 		// TODO: Start the command
 	}
 
@@ -40,6 +51,10 @@ class Command
 	 * Prepares run configuration to a config file
 	 *
 	 * @return void
+	 * @see CliArguments
+	 * @see ConfigFile
+	 *
+	 * @see Configurator
 	 * @see Config
 	 */
 	public function prepareConfig() : void {
@@ -90,6 +105,30 @@ class Command
 			echo "\t".Colors::color(ForegroundColors::BLUE).$name.Colors::reset().PHP_EOL."\t\t".($info['description'] ?? '').PHP_EOL;
 		}
 		exit(0);
+	}
+
+	/**
+	 * Load all files to be extracted
+	 *
+	 * @return void
+	 * @see FileScanner
+	 *
+	 */
+	protected function prepareFiles() : void {
+		try {
+			$this->files = (new FileScanner($this->config))->getFiles();
+		} catch (Exceptions\FileException $e) {
+			fprintf(
+				STDERR,
+				Colors::color(ForegroundColors::RED, attribute: TextAttributes::BOLD).
+				'Error while scanning for files.'.PHP_EOL.
+				'Error: '.Colors::color(attribute: TextAttributes::UN_BOLD).$e->getMessage().PHP_EOL.PHP_EOL.
+				'------------------------------------------------------------------------'.PHP_EOL.
+				$e->getTraceAsString().PHP_EOL.
+				Colors::reset()
+			);
+			exit(2);
+		}
 	}
 
 }

@@ -28,6 +28,13 @@ class CliArguments implements Configurator
 			'value'         => '<dir>',
 			'valueOptional' => false,
 		],
+		'e' => [
+			'long'          => 'extensions',
+			'description'   => 'Regex value to describe files to be scanned.',
+			'isOptional'    => true,
+			'value'         => '<string>',
+			'valueOptional' => false,
+		]
 	];
 
 	public static function getShortOpts() : string {
@@ -83,6 +90,10 @@ class CliArguments implements Configurator
 
 		if (isset($options['o']) || isset($options['output'])) {
 			$config->output = $options['output'] ?? $options['o'];
+		}
+
+		if (isset($options['e']) || isset($options['extensions'])) {
+			$config->fileExtensions[] = $options['extensions'] ?? $options['e'];
 		}
 
 		if (!empty($sources)) {
