@@ -5,6 +5,9 @@
 	"bin": [
 		"bin/docgen"
 	],
+	"scripts": {
+		"runDocgen": "./bin/docgen"
+	},
 	"autoload": {
 		"psr-4": {
 			"Lsr\\Doc\\": "src"
@@ -23,6 +26,7 @@
 	"require": {
 		"latte/latte": "^3.0",
 		"php": ">=8.1",
-		"nette/neon": "^3.3"
+		"nette/neon": "^3.3",
+		"nette/utils": "^3.2"
 	}
 }

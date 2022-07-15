@@ -13,4 +13,15 @@ namespace Lsr\Doc\Config;
 class Config
 {
 
+	/** @var bool If true, do not execute the script, but print help information instead. */
+	public bool $printHelp = false;
+
+	/** @var string[] Source files or directories */
+	public array $sources = [];
+
+	/** @var string Output directory */
+	public string $output = '';
+
+	public string $configFile = 'docgen.neon';
+
 }
