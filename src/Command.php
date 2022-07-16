@@ -14,6 +14,7 @@ use Lsr\Doc\Scan\FileScanner;
 use Lsr\Doc\Scan\SymbolExtractor;
 use Lsr\Doc\Services\Cache;
 use Lsr\Doc\Symbols\FileSymbol;
+use Lsr\Doc\Symbols\SymbolMap;
 use Nette\Loaders\RobotLoader;
 
 class Command
@@ -34,6 +35,7 @@ class Command
 	 * Input point for the command.
 	 *
 	 * @return never
+	 * @throws Exceptions\FileException
 	 */
 	public static function start() : never {
 		$command = new self();
@@ -45,6 +47,7 @@ class Command
 	 * Run the script
 	 *
 	 * @return void
+	 * @throws Exceptions\FileException
 	 */
 	public function run() : void {
 		$this->prepareConfig();
@@ -60,13 +63,15 @@ class Command
 			$extractor = new SymbolExtractor($file, $this->config);
 			$this->symbols[] = $extractor->extract();
 		}
-		print_r($this->symbols);
+		SymbolMap::getInstance()->add(...$this->symbols);
+		print_r(SymbolMap::getInstance()->symbols);
 	}
 
 	/**
 	 * Prepares run configuration to a config file
 	 *
 	 * @return void
+	 * @throws Exceptions\FileException
 	 * @see CliArguments
 	 * @see ConfigFile
 	 *
