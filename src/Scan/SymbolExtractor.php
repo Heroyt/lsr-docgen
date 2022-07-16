@@ -48,7 +48,7 @@ class SymbolExtractor
 			$namespace = $matches[1];
 		}
 
-		$file = new FileSymbol($this->file, $namespace, $this->file);
+		$file = FileSymbol::scan($contents, $this->file, null, $namespace)[0];
 
 		// Get all symbols from extensions
 		/** @var SymbolExtension[] $extensions */

@@ -17,7 +17,7 @@ class FileSymbol extends Symbol
 	 * @post If $parent is given, add the created symbols to it (Symbol::$symbols)
 	 */
 	public static function scan(string $content, string $file, ?Symbol $parent = null, string $namespace = '') : array {
-		$fileSymbol = new static($file, $namespace, $file);
+		$fileSymbol = new static($file, $namespace, $file, $parent);
 		if (isset($parent)) {
 			$parent->symbols[] = $fileSymbol;
 		}

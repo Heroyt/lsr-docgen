@@ -22,7 +22,7 @@ class ClassSymbol extends Symbol
 		preg_match_all('/^class\s+([a-zA-Z_\x80-\xff][a-zA-Z\d_\x80-\xff]*)(?:\s+[a-zA-Z_\x80-\xff][a-zA-Z\d_\x80-\xff\s]*)?\s*{/m', $content, $matches);
 		$symbols = [];
 		foreach ($matches[1] as $className) {
-			$class = new static($className, $namespace, $file);
+			$class = new static($className, $namespace, $file, $parent);
 			$symbols[] = $class;
 			if (isset($parent)) {
 				$parent->symbols[] = $class;

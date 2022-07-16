@@ -11,9 +11,11 @@ abstract class Symbol implements SymbolInterface
 	public array $symbols = [];
 
 	public function __construct(
-		public readonly string $name,
-		public readonly string $namespace,
-		public readonly string $file,
+		public readonly string     $name,
+		public readonly string     $namespace,
+		public readonly string     $file,
+		/** @var Symbol|null $parent Back-reference for parent symbol */
+		protected readonly ?Symbol $parent = null,
 	) {
 	}
 

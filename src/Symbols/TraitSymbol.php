@@ -22,7 +22,7 @@ class TraitSymbol extends Symbol
 		preg_match_all('/^trait\s+([a-zA-Z_\x80-\xff][a-zA-Z\d_\x80-\xff]*)(?:\s+[a-zA-Z_\x80-\xff][a-zA-Z\d_\x80-\xff\s]*)?\s*{/m', $content, $matches);
 		$symbols = [];
 		foreach ($matches[1] as $traitName) {
-			$trait = new static($traitName, $namespace, $file);
+			$trait = new static($traitName, $namespace, $file, $parent);
 			$symbols[] = $trait;
 			if (isset($parent)) {
 				$parent->symbols[] = $trait;

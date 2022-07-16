@@ -22,7 +22,7 @@ class InterfaceSymbol extends Symbol
 		preg_match_all('/^interface\s+([a-zA-Z_\x80-\xff][a-zA-Z\d_\x80-\xff]*)(?:\s+[a-zA-Z_\x80-\xff][a-zA-Z\d_\x80-\xff\s]*)?\s*{/m', $content, $matches);
 		$symbols = [];
 		foreach ($matches[1] as $interfaceName) {
-			$interface = new static($interfaceName, $namespace, $file);
+			$interface = new static($interfaceName, $namespace, $file, $parent);
 			$symbols[] = $interface;
 			if (isset($parent)) {
 				$parent->symbols[] = $interface;

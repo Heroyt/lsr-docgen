@@ -22,7 +22,7 @@ class FunctionSymbol extends Symbol
 		preg_match_all('/^function\s+([a-zA-Z_\x80-\xff][a-zA-Z\d_\x80-\xff]*)\s*\([^)]*\)/m', $content, $matches);
 		$symbols = [];
 		foreach ($matches[1] as $functionName) {
-			$function = new static($functionName, $namespace, $file);
+			$function = new static($functionName, $namespace, $file, $parent);
 			$symbols[] = $function;
 			if (isset($parent)) {
 				$parent->symbols[] = $function;
