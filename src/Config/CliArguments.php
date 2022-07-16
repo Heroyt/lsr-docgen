@@ -34,7 +34,12 @@ class CliArguments implements Configurator
 			'isOptional'    => true,
 			'value'         => '<string>',
 			'valueOptional' => false,
-		]
+		],
+		'p' => [
+			'long'        => 'prune',
+			'description' => 'Prune all cache file prior to running the command.',
+			'isOptional'  => true,
+		],
 	];
 
 	public static function getShortOpts() : string {
@@ -94,6 +99,10 @@ class CliArguments implements Configurator
 
 		if (isset($options['e']) || isset($options['extensions'])) {
 			$config->fileExtensions[] = $options['extensions'] ?? $options['e'];
+		}
+
+		if (isset($options['p']) || isset($options['prune'])) {
+			$config->clearCache = true;
 		}
 
 		if (!empty($sources)) {

@@ -4,9 +4,11 @@ namespace Lsr\Doc\Config;
 
 use Lsr\Doc\Exceptions\ConfigurationException;
 use Lsr\Doc\Exceptions\InvalidConfigurationTypeException;
+use Lsr\Doc\Extensions\Extension;
 use Nette\Neon\Exception;
 use Nette\Neon\Neon;
 use Nette\Utils\Arrays;
+use function Lsr\Doc\trailingSlashIt;
 
 /**
  * This class is responsible from loading configuration from given configuration file.
@@ -49,6 +51,15 @@ class ConfigFile implements Configurator
 		// Do not overwrite previously saved options.
 		// This should also validate the option types.
 
+		if (empty($config->cacheDir) && isset($info['cacheDir'])) {
+			// Validate
+			if (!is_string($info['cacheDir'])) {
+				throw new InvalidConfigurationTypeException('Cache directory settings must be a string.');
+			}
+
+			$config->cacheDir = trailingSlashIt($info['cacheDir']);
+		}
+
 		if (empty($config->output) && isset($info['output'])) {
 			// Validate
 			if (!is_string($info['output'])) {
@@ -84,27 +95,44 @@ class ConfigFile implements Configurator
 			$config->sources = $info['sources'];
 		}
 
-		if (empty($config->fileExtensions) && isset($info['extensions'])) {
+		if (empty($config->fileExtensions) && isset($info['fileExtensions'])) {
 			// Handle conversion from string to array of strings
-			if (is_string($info['extensions'])) {
-				$info['extensions'] = [$info['extensions']];
+			if (is_string($info['fileExtensions'])) {
+				$info['fileExtensions'] = [$info['fileExtensions']];
 			}
 
 			// Validate
-			if (!is_array($info['extensions']) || !Arrays::every($info['extensions'], static function(mixed $value) : bool {
+			if (!is_array($info['fileExtensions']) || !Arrays::every($info['fileExtensions'], static function(mixed $value) : bool {
 					return is_string($value);
 				})) {
-				throw new InvalidConfigurationTypeException('Extensions must either be a string or an array of strings.');
+				throw new InvalidConfigurationTypeException('File extensions must either be a string or an array of strings.');
 			}
 
-			$config->fileExtensions = $info['extensions'];
+			$config->fileExtensions = $info['fileExtensions'];
+		}
+
+		if (isset($info['extensions'])) {
+			// Validate and add
+			if (!is_array($info['extensions'])) {
+				throw new InvalidConfigurationTypeException('Extensions must be an array of classes.');
+			}
+
+			foreach ($info['extensions'] as $extension) {
+				if (!class_exists($extension)) {
+					throw new ConfigurationException('Extension "'.$extension.'" does not exist.');
+				}
+				if (!\Lsr\Doc\class_implements($extension, Extension::class)) {
+					throw new ConfigurationException('Extension "'.$extension.'" must implement the Extension interface.');
+				}
+				$config->extensions[] = $extension;
+			}
 		}
 	}
 
 	/**
 	 * Parse information from config files and return it as an array
 	 *
-	 * @return array{output:string,sources:string|string[]}
+	 * @return array{output:string,sources:string|string[],fileExtensions:string|string[],extensions:Extension[]}
 	 * @throws Exception
 	 */
 	protected function parseConfigFile() : array {

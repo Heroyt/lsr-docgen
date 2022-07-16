@@ -11,7 +11,10 @@
 	"autoload": {
 		"psr-4": {
 			"Lsr\\Doc\\": "src"
-		}
+		},
+		"files": [
+			"includes/functions.php"
+		]
 	},
 	"authors": [
 		{
@@ -27,6 +30,7 @@
 		"latte/latte": "^3.0",
 		"php": ">=8.1",
 		"nette/neon": "^3.3",
-		"nette/utils": "^3.2"
+		"nette/utils": "^3.2",
+		"nette/robot-loader": "^3.4"
 	}
 }

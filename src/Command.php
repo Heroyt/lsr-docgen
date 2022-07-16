@@ -11,6 +11,10 @@ use Lsr\Doc\Config\ConfigFile;
 use Lsr\Doc\Config\Configurator;
 use Lsr\Doc\Exceptions\ConfigurationException;
 use Lsr\Doc\Scan\FileScanner;
+use Lsr\Doc\Scan\SymbolExtractor;
+use Lsr\Doc\Services\Cache;
+use Lsr\Doc\Symbols\FileSymbol;
+use Nette\Loaders\RobotLoader;
 
 class Command
 {
@@ -23,6 +27,8 @@ class Command
 
 	/** @var string[] All files to extract */
 	protected array $files = [];
+	/** @var FileSymbol[] */
+	protected array $symbols = [];
 
 	/**
 	 * Input point for the command.
@@ -45,6 +51,16 @@ class Command
 		$this->prepareFiles();
 
 		// TODO: Start the command
+		// Scan and autoload all files
+		$autoloader = new RobotLoader();
+		$autoloader->addDirectory(...$this->files);
+		$autoloader->setTempDirectory($this->config->cacheDir);
+		$autoloader->register();
+		foreach ($this->files as $file) {
+			$extractor = new SymbolExtractor($file, $this->config);
+			$this->symbols[] = $extractor->extract();
+		}
+		print_r($this->symbols);
 	}
 
 	/**
@@ -74,6 +90,9 @@ class Command
 				Colors::reset()
 			);
 			exit(1);
+		}
+		if ($this->config->clearCache) {
+			Cache::getInstance($this->config)->clear();
 		}
 		if ($this->config->printHelp) {
 			$this->printHelp();

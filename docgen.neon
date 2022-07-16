@@ -1,6 +1,7 @@
 output: 'docs/'
+cacheDir: 'docgen-cache/'
 sources:
 	- 'src/'
-extensions:
+fileExtensions:
 	- '/.+\.php(?:t)?/'
 	- '.phtml'
