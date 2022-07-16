@@ -3,6 +3,7 @@
 namespace Lsr\Doc\Scan;
 
 use Lsr\Doc\Config\Config;
+use Lsr\Doc\Exceptions\FileException;
 use Lsr\Doc\Extensions\SymbolExtension;
 use Lsr\Doc\Services\Cache;
 use Lsr\Doc\Symbols\FileSymbol;
@@ -24,6 +25,12 @@ class SymbolExtractor
 	) {
 	}
 
+	/**
+	 * Extract symbols from a file
+	 *
+	 * @return FileSymbol
+	 * @throws FileException On cache file read error
+	 */
 	public function extract() : FileSymbol {
 		$cache = Cache::getInstance($this->config);
 		$cached = $cache->getCache(self::CACHE_CATEGORY, $this->file);
