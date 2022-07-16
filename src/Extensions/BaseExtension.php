@@ -2,7 +2,6 @@
 
 namespace Lsr\Doc\Extensions;
 
-use JetBrains\PhpStorm\ArrayShape;
 use Lsr\Doc\Config\Config;
 use Lsr\Doc\DocBlock\Tags\BriefTag;
 use Lsr\Doc\DocBlock\Tags\DetailsTag;
@@ -30,12 +29,14 @@ use Lsr\Doc\DocBlock\Tags\Psr19\UsesTag;
 use Lsr\Doc\DocBlock\Tags\Psr19\VarTag;
 use Lsr\Doc\DocBlock\Tags\Psr19\VersionTag;
 use Lsr\Doc\DocBlock\Tags\Tag;
+use Lsr\Doc\Pipeline\DocBlockExtract;
+use Lsr\Doc\Pipeline\PipelineBase;
 use Lsr\Doc\Symbols\ClassSymbol;
 use Lsr\Doc\Symbols\FunctionSymbol;
 use Lsr\Doc\Symbols\InterfaceSymbol;
 use Lsr\Doc\Symbols\TraitSymbol;
 
-class BaseExtension implements SymbolExtension, TagExtension
+class BaseExtension implements SymbolExtension, TagExtension, PipelineExtension
 {
 
 	public function __construct(
@@ -80,24 +81,33 @@ class BaseExtension implements SymbolExtension, TagExtension
 			'internal'   => InternalTag::class,
 			'link'       => LinkTag::class,
 			'method'     => MethodTag::class,
-			'package'    => PackageTag::class,
-			'param'      => ParamTag::class,
-			'property'   => PropertyTag::class,
-			'return'     => ReturnTag::class,
-			'see'        => SeeTag::class,
-			'since'      => SinceTag::class,
-			'throws'     => ThrowsTag::class,
-			'todo'       => TodoTag::class,
-			'uses'       => UsesTag::class,
-			'var'        => VarTag::class,
-			'version'    => VersionTag::class,
+			'package'   => PackageTag::class,
+			'param'     => ParamTag::class,
+			'property'  => PropertyTag::class,
+			'return'    => ReturnTag::class,
+			'see'       => SeeTag::class,
+			'since'     => SinceTag::class,
+			'throws'    => ThrowsTag::class,
+			'todo'      => TodoTag::class,
+			'uses'      => UsesTag::class,
+			'var'       => VarTag::class,
+			'version'   => VersionTag::class,
 
 			// Doxygen tags
-			'attention'  => AttentionTag::class,
-			'post'       => PostTag::class,
-			'pre'        => PreTag::class,
-			'warning'    => WarningTag::class,
+			'attention' => AttentionTag::class,
+			'post'      => PostTag::class,
+			'pre'       => PreTag::class,
+			'warning'   => WarningTag::class,
 			// TODO: Implement more doxygen tags
+		];
+	}
+
+	/**
+	 * @return PipelineBase[]
+	 */
+	public function getPipeline() : array {
+		return [
+			DocBlockExtract::class,
 		];
 	}
 }

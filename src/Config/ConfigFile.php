@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file  configFile.php
+ * @brief Class responsible for loading configuration from neon files
+ */
 
 namespace Lsr\Doc\Config;
 
@@ -11,7 +15,7 @@ use Nette\Utils\Arrays;
 use function Lsr\Doc\trailingSlashIt;
 
 /**
- * This class is responsible from loading configuration from given configuration file.
+ * This class is responsible for loading configuration from given configuration file.
  */
 class ConfigFile implements Configurator
 {

@@ -2,7 +2,7 @@
 
 namespace Lsr\Doc\Symbols;
 
-abstract class Symbol implements SymbolInterface
+abstract class Symbol implements SymbolInterface, \JsonSerializable
 {
 
 	public const PRIORITY = 1;
@@ -20,6 +20,13 @@ abstract class Symbol implements SymbolInterface
 		/** @var Symbol|null $parent Back-reference for parent symbol */
 		protected readonly ?Symbol $parent = null,
 	) {
+	}
+
+	public function jsonSerialize() : array {
+		$data = get_object_vars($this);
+		$data['class'] = $this::class;
+		unset($data['parent']);
+		return $data;
 	}
 
 }

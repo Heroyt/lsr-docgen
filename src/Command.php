@@ -10,6 +10,8 @@ use Lsr\Doc\Config\Config;
 use Lsr\Doc\Config\ConfigFile;
 use Lsr\Doc\Config\Configurator;
 use Lsr\Doc\Exceptions\ConfigurationException;
+use Lsr\Doc\Extensions\PipelineExtension;
+use Lsr\Doc\Pipeline\PipelineBase;
 use Lsr\Doc\Scan\FileScanner;
 use Lsr\Doc\Scan\SymbolExtractor;
 use Lsr\Doc\Services\Cache;
@@ -64,7 +66,29 @@ class Command
 			$this->symbols[] = $extractor->extract();
 		}
 		SymbolMap::getInstance()->add(...$this->symbols);
-		print_r(SymbolMap::getInstance()->symbols);
+
+		/** @var PipelineExtension[] $extensions */
+		$extensions = $this->config->getExtensions(PipelineExtension::class);
+		/** @var PipelineBase[] $pipeline */
+		$pipeline = [];
+		foreach ($extensions as $extension) {
+			$pipeline[] = $extension->getPipeline();
+		}
+		// Flatten the array
+		$pipeline = array_merge(...$pipeline);
+		// Sort
+		usort($pipeline, static function($pipelineA, $pipelineB) {
+			/** @var PipelineBase $pipelineA */
+			/** @var PipelineBase $pipelineB */
+			return $pipelineA::ORDER - $pipelineB::ORDER;
+		});
+		// Walk through the pipeline
+		foreach ($pipeline as $step) {
+			/** @var PipelineBase $step */
+			$step = new $step($this->config);
+			$step->process($this->symbols);
+		}
+		file_put_contents('symbols.json', json_encode($this->symbols, JSON_PRETTY_PRINT));
 	}
 
 	/**
