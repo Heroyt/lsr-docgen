@@ -10,6 +10,9 @@ abstract class Symbol implements SymbolInterface
 	/** @var Symbol[] */
 	public array $symbols = [];
 
+	/** @var array Any metadata that can be stored in the symbol */
+	public array $metadata = [];
+
 	public function __construct(
 		public readonly string     $name,
 		public readonly string     $namespace,
