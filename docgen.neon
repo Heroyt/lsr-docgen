@@ -5,3 +5,4 @@ sources:
 fileExtensions:
 	- '/.+\.php(?:t)?/'
 	- '.phtml'
+theme: basic

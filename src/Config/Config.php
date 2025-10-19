@@ -39,6 +39,10 @@ class Config
 	/** @var Extension[] Loaded extensions */
 	public array $extensions = [BaseExtension::class];
 
+    public string $theme = 'basic';
+
+    public string $customTemplateDir = '';
+
 	/**
 	 * Get loaded extensions
 	 *

@@ -1,0 +1,1583 @@
+[
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Pipeline\\PipelineInterface"
+          }
+        },
+        "name": "PipelineInterface",
+        "namespace": "Lsr\\Doc\\Pipeline",
+        "file": "src\/Pipeline\/PipelineInterface.php",
+        "class": "Lsr\\Doc\\Symbols\\InterfaceSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Pipeline\/PipelineInterface.php",
+    "namespace": "Lsr\\Doc\\Pipeline",
+    "file": "src\/Pipeline\/PipelineInterface.php",
+    "uses": {
+      "Symbol": "Lsr\\Doc\\Symbols\\Symbol"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Pipeline\/PipelineBase.php",
+    "namespace": "Lsr\\Doc\\Pipeline",
+    "file": "src\/Pipeline\/PipelineBase.php",
+    "uses": {
+      "Config": "Lsr\\Doc\\Config\\Config"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Pipeline\\DocBlockExtract"
+          }
+        },
+        "name": "DocBlockExtract",
+        "namespace": "Lsr\\Doc\\Pipeline",
+        "file": "src\/Pipeline\/DocBlockExtract.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Pipeline\/DocBlockExtract.php",
+    "namespace": "Lsr\\Doc\\Pipeline",
+    "file": "src\/Pipeline\/DocBlockExtract.php",
+    "uses": {
+      "DocBlockParser": "Lsr\\Doc\\DocBlock\\DocBlockParser",
+      "ClassSymbol": "Lsr\\Doc\\Symbols\\ClassSymbol",
+      "FileSymbol": "Lsr\\Doc\\Symbols\\FileSymbol",
+      "FunctionSymbol": "Lsr\\Doc\\Symbols\\FunctionSymbol",
+      "InterfaceSymbol": "Lsr\\Doc\\Symbols\\InterfaceSymbol",
+      "Symbol": "Lsr\\Doc\\Symbols\\Symbol",
+      "TraitSymbol": "Lsr\\Doc\\Symbols\\TraitSymbol",
+      "ReflectionClass": "ReflectionClass",
+      "ReflectionException": "ReflectionException",
+      "ReflectionFunction": "ReflectionFunction",
+      "Reflector": "Reflector"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Config\\ConfigFile"
+          },
+          "doc-block": [
+            {
+              "name": "brief",
+              "value": "This class is responsible for loading configuration from given configuration file."
+            }
+          ]
+        },
+        "name": "ConfigFile",
+        "namespace": "Lsr\\Doc\\Config",
+        "file": "src\/Config\/ConfigFile.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": [
+        [
+          {
+            "name": "file",
+            "value": "configFile.php"
+          },
+          {
+            "name": "brief",
+            "value": "Class responsible for loading configuration from neon files"
+          }
+        ]
+      ]
+    },
+    "name": "src\/Config\/ConfigFile.php",
+    "namespace": "Lsr\\Doc\\Config",
+    "file": "src\/Config\/ConfigFile.php",
+    "uses": {
+      "ConfigurationException": "Lsr\\Doc\\Exceptions\\ConfigurationException",
+      "InvalidConfigurationTypeException": "Lsr\\Doc\\Exceptions\\InvalidConfigurationTypeException",
+      "Extension": "Lsr\\Doc\\Extensions\\Extension",
+      "Exception": "Nette\\Neon\\Exception",
+      "Neon": "Nette\\Neon\\Neon",
+      "Arrays": "Nette\\Utils\\Arrays",
+      "trailingSlashIt()": "Lsr\\Doc\\trailingSlashIt()"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Config\\Config"
+          },
+          "doc-block": [
+            {
+              "name": "brief",
+              "value": "A structure containing the configuration options of the run."
+            },
+            {
+              "name": "details",
+              "value": "The configuration is parsed from CLI arguments and from a NEON config file."
+            },
+            {
+              "name": "see",
+              "value": "CliArguments"
+            },
+            {
+              "name": "see",
+              "value": "ConfigFile"
+            }
+          ]
+        },
+        "name": "Config",
+        "namespace": "Lsr\\Doc\\Config",
+        "file": "src\/Config\/Config.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Config\/Config.php",
+    "namespace": "Lsr\\Doc\\Config",
+    "file": "src\/Config\/Config.php",
+    "uses": {
+      "BaseExtension": "Lsr\\Doc\\Extensions\\BaseExtension",
+      "Extension": "Lsr\\Doc\\Extensions\\Extension"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Config\\CliArguments"
+          },
+          "doc-block": [
+            {
+              "name": "brief",
+              "value": "This class parses options from the command line."
+            }
+          ]
+        },
+        "name": "CliArguments",
+        "namespace": "Lsr\\Doc\\Config",
+        "file": "src\/Config\/CliArguments.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Config\/CliArguments.php",
+    "namespace": "Lsr\\Doc\\Config",
+    "file": "src\/Config\/CliArguments.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Config\\Configurator"
+          },
+          "doc-block": [
+            {
+              "name": "brief",
+              "value": "Interface for all possible configuration sources"
+            }
+          ]
+        },
+        "name": "Configurator",
+        "namespace": "Lsr\\Doc\\Config",
+        "file": "src\/Config\/Configurator.php",
+        "class": "Lsr\\Doc\\Symbols\\InterfaceSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Config\/Configurator.php",
+    "namespace": "Lsr\\Doc\\Config",
+    "file": "src\/Config\/Configurator.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Scan\\SymbolExtractor"
+          },
+          "doc-block": [
+            {
+              "name": "brief",
+              "value": "Class responsible for extracting symbols from files"
+            },
+            {
+              "name": "details",
+              "value": "Symbols are classes, functions and even files themselves"
+            }
+          ]
+        },
+        "name": "SymbolExtractor",
+        "namespace": "Lsr\\Doc\\Scan",
+        "file": "src\/Scan\/SymbolExtractor.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": [
+        [
+          {
+            "name": "var",
+            "value": "SymbolExtension[] $extensions"
+          }
+        ],
+        [
+          {
+            "name": "var",
+            "value": "Symbol[] $symbolClasses"
+          }
+        ],
+        [
+          {
+            "name": "var",
+            "value": "Symbol $symbolA"
+          }
+        ],
+        [
+          {
+            "name": "var",
+            "value": "Symbol $symbolB"
+          }
+        ]
+      ]
+    },
+    "name": "src\/Scan\/SymbolExtractor.php",
+    "namespace": "Lsr\\Doc\\Scan",
+    "file": "src\/Scan\/SymbolExtractor.php",
+    "uses": {
+      "Config": "Lsr\\Doc\\Config\\Config",
+      "FileException": "Lsr\\Doc\\Exceptions\\FileException",
+      "SymbolExtension": "Lsr\\Doc\\Extensions\\SymbolExtension",
+      "Cache": "Lsr\\Doc\\Services\\Cache",
+      "FileSymbol": "Lsr\\Doc\\Symbols\\FileSymbol",
+      "Symbol": "Lsr\\Doc\\Symbols\\Symbol"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Scan\\FileScanner"
+          }
+        },
+        "name": "FileScanner",
+        "namespace": "Lsr\\Doc\\Scan",
+        "file": "src\/Scan\/FileScanner.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Scan\/FileScanner.php",
+    "namespace": "Lsr\\Doc\\Scan",
+    "file": "src\/Scan\/FileScanner.php",
+    "uses": {
+      "Config": "Lsr\\Doc\\Config\\Config",
+      "FileException": "Lsr\\Doc\\Exceptions\\FileException",
+      "RecursiveDirectoryIterator": "RecursiveDirectoryIterator",
+      "RecursiveIteratorIterator": "RecursiveIteratorIterator",
+      "RegexIterator": "RegexIterator"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Exceptions\/ConfigurationException.php",
+    "namespace": "Lsr\\Doc\\Exceptions",
+    "file": "src\/Exceptions\/ConfigurationException.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Exceptions\/FileException.php",
+    "namespace": "Lsr\\Doc\\Exceptions",
+    "file": "src\/Exceptions\/FileException.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Exceptions\\InvalidConfigurationTypeException"
+          },
+          "doc-block": [
+            {
+              "name": "brief",
+              "value": "Exception for configuration type validation"
+            }
+          ]
+        },
+        "name": "InvalidConfigurationTypeException",
+        "namespace": "Lsr\\Doc\\Exceptions",
+        "file": "src\/Exceptions\/InvalidConfigurationTypeException.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Exceptions\/InvalidConfigurationTypeException.php",
+    "namespace": "Lsr\\Doc\\Exceptions",
+    "file": "src\/Exceptions\/InvalidConfigurationTypeException.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Extensions\/BaseExtension.php",
+    "namespace": "Lsr\\Doc\\Extensions",
+    "file": "src\/Extensions\/BaseExtension.php",
+    "uses": {
+      "Config": "Lsr\\Doc\\Config\\Config",
+      "BriefTag": "Lsr\\Doc\\DocBlock\\Tags\\BriefTag",
+      "DetailsTag": "Lsr\\Doc\\DocBlock\\Tags\\DetailsTag",
+      "AttentionTag": "Lsr\\Doc\\DocBlock\\Tags\\Doxygen\\AttentionTag",
+      "PostTag": "Lsr\\Doc\\DocBlock\\Tags\\Doxygen\\PostTag",
+      "PreTag": "Lsr\\Doc\\DocBlock\\Tags\\Doxygen\\PreTag",
+      "WarningTag": "Lsr\\Doc\\DocBlock\\Tags\\Doxygen\\WarningTag",
+      "ApiTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\ApiTag",
+      "AuthorTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\AuthorTag",
+      "CopyrightTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\CopyrightTag",
+      "DeprecatedTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\DeprecatedTag",
+      "GeneratedTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\GeneratedTag",
+      "InternalTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\InternalTag",
+      "LinkTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\LinkTag",
+      "MethodTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\MethodTag",
+      "PackageTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\PackageTag",
+      "ParamTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\ParamTag",
+      "PropertyTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\PropertyTag",
+      "ReturnTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\ReturnTag",
+      "SeeTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\SeeTag",
+      "SinceTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\SinceTag",
+      "ThrowsTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\ThrowsTag",
+      "TodoTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\TodoTag",
+      "UsesTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\UsesTag",
+      "VarTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\VarTag",
+      "VersionTag": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\VersionTag",
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag",
+      "DocBlockExtract": "Lsr\\Doc\\Pipeline\\DocBlockExtract",
+      "PipelineBase": "Lsr\\Doc\\Pipeline\\PipelineBase",
+      "ClassSymbol": "Lsr\\Doc\\Symbols\\ClassSymbol",
+      "FunctionSymbol": "Lsr\\Doc\\Symbols\\FunctionSymbol",
+      "InterfaceSymbol": "Lsr\\Doc\\Symbols\\InterfaceSymbol",
+      "TraitSymbol": "Lsr\\Doc\\Symbols\\TraitSymbol"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Extensions\\PipelineExtension"
+          }
+        },
+        "name": "PipelineExtension",
+        "namespace": "Lsr\\Doc\\Extensions",
+        "file": "src\/Extensions\/PipelineExtension.php",
+        "class": "Lsr\\Doc\\Symbols\\InterfaceSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Extensions\/PipelineExtension.php",
+    "namespace": "Lsr\\Doc\\Extensions",
+    "file": "src\/Extensions\/PipelineExtension.php",
+    "uses": {
+      "PipelineBase": "Lsr\\Doc\\Pipeline\\PipelineBase"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Extensions\\SymbolExtension"
+          }
+        },
+        "name": "SymbolExtension",
+        "namespace": "Lsr\\Doc\\Extensions",
+        "file": "src\/Extensions\/SymbolExtension.php",
+        "class": "Lsr\\Doc\\Symbols\\InterfaceSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Extensions\/SymbolExtension.php",
+    "namespace": "Lsr\\Doc\\Extensions",
+    "file": "src\/Extensions\/SymbolExtension.php",
+    "uses": {
+      "Symbol": "Lsr\\Doc\\Symbols\\Symbol"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Extensions\\TagExtension"
+          }
+        },
+        "name": "TagExtension",
+        "namespace": "Lsr\\Doc\\Extensions",
+        "file": "src\/Extensions\/TagExtension.php",
+        "class": "Lsr\\Doc\\Symbols\\InterfaceSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Extensions\/TagExtension.php",
+    "namespace": "Lsr\\Doc\\Extensions",
+    "file": "src\/Extensions\/TagExtension.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Extensions\\Extension"
+          }
+        },
+        "name": "Extension",
+        "namespace": "Lsr\\Doc\\Extensions",
+        "file": "src\/Extensions\/Extension.php",
+        "class": "Lsr\\Doc\\Symbols\\InterfaceSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Extensions\/Extension.php",
+    "namespace": "Lsr\\Doc\\Extensions",
+    "file": "src\/Extensions\/Extension.php",
+    "uses": {
+      "Config": "Lsr\\Doc\\Config\\Config"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\CliTools\\Colors"
+          },
+          "doc-block": [
+            {
+              "name": "brief",
+              "value": "CLI helper class for dealing with command line colors"
+            }
+          ]
+        },
+        "name": "Colors",
+        "namespace": "Lsr\\Doc\\CliTools",
+        "file": "src\/CliTools\/Colors.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": [
+        [
+          {
+            "name": "author",
+            "value": "Tom\u00e1\u0161 Voj\u00edk <xvojik00@stud.fit.vutbr.cz>, <vojik@wboy.cz>"
+          }
+        ]
+      ]
+    },
+    "name": "src\/CliTools\/Colors.php",
+    "namespace": "Lsr\\Doc\\CliTools",
+    "file": "src\/CliTools\/Colors.php",
+    "uses": {
+      "BackgroundColors": "Lsr\\Doc\\CliTools\\Enums\\BackgroundColors",
+      "ForegroundColors": "Lsr\\Doc\\CliTools\\Enums\\ForegroundColors",
+      "TextAttributes": "Lsr\\Doc\\CliTools\\Enums\\TextAttributes"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": [
+        [
+          {
+            "name": "author",
+            "value": "Tom\u00e1\u0161 Voj\u00edk <xvojik00@stud.fit.vutbr.cz>, <vojik@wboy.cz>"
+          }
+        ]
+      ]
+    },
+    "name": "src\/CliTools\/Enums\/ForegroundColors.php",
+    "namespace": "Lsr\\Doc\\CliTools\\Enums",
+    "file": "src\/CliTools\/Enums\/ForegroundColors.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": [
+        [
+          {
+            "name": "author",
+            "value": "Tom\u00e1\u0161 Voj\u00edk <xvojik00@stud.fit.vutbr.cz>, <vojik@wboy.cz>"
+          }
+        ]
+      ]
+    },
+    "name": "src\/CliTools\/Enums\/BackgroundColors.php",
+    "namespace": "Lsr\\Doc\\CliTools\\Enums",
+    "file": "src\/CliTools\/Enums\/BackgroundColors.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": [
+        [
+          {
+            "name": "author",
+            "value": "Tom\u00e1\u0161 Voj\u00edk <xvojik00@stud.fit.vutbr.cz>, <vojik@wboy.cz>"
+          }
+        ]
+      ]
+    },
+    "name": "src\/CliTools\/Enums\/TextAttributes.php",
+    "namespace": "Lsr\\Doc\\CliTools\\Enums",
+    "file": "src\/CliTools\/Enums\/TextAttributes.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\DocBlockParser"
+          }
+        },
+        "name": "DocBlockParser",
+        "namespace": "Lsr\\Doc\\DocBlock",
+        "file": "src\/DocBlock\/DocBlockParser.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": [
+        [
+          {
+            "name": "var",
+            "value": "TagExtension[] $extensions"
+          }
+        ],
+        [
+          {
+            "name": "var",
+            "value": "array<string, Tag> $availableTags"
+          }
+        ]
+      ]
+    },
+    "name": "src\/DocBlock\/DocBlockParser.php",
+    "namespace": "Lsr\\Doc\\DocBlock",
+    "file": "src\/DocBlock\/DocBlockParser.php",
+    "uses": {
+      "Config": "Lsr\\Doc\\Config\\Config",
+      "BriefTag": "Lsr\\Doc\\DocBlock\\Tags\\BriefTag",
+      "DetailsTag": "Lsr\\Doc\\DocBlock\\Tags\\DetailsTag",
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag",
+      "TagExtension": "Lsr\\Doc\\Extensions\\TagExtension"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\BriefTag"
+          }
+        },
+        "name": "BriefTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags",
+        "file": "src\/DocBlock\/Tags\/BriefTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/BriefTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags",
+    "file": "src\/DocBlock\/Tags\/BriefTag.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+          },
+          "doc-block": [
+            {
+              "name": "brief",
+              "value": "Base class for different doc-block tags"
+            },
+            {
+              "name": "details",
+              "value": "Each specific class can have different availability.\nEach specific tag can further parse its own value.\nEach specific tag must have its own latte template to generate an output."
+            }
+          ]
+        },
+        "name": "Tag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags",
+        "file": "src\/DocBlock\/Tags\/Tag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Tag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags",
+    "file": "src\/DocBlock\/Tags\/Tag.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\DetailsTag"
+          }
+        },
+        "name": "DetailsTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags",
+        "file": "src\/DocBlock\/Tags\/DetailsTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/DetailsTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags",
+    "file": "src\/DocBlock\/Tags\/DetailsTag.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\TodoTag"
+          }
+        },
+        "name": "TodoTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/TodoTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/TodoTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/TodoTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\InternalTag"
+          }
+        },
+        "name": "InternalTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/InternalTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/InternalTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/InternalTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\SeeTag"
+          }
+        },
+        "name": "SeeTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/SeeTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/SeeTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/SeeTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\VersionTag"
+          }
+        },
+        "name": "VersionTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/VersionTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/VersionTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/VersionTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\ThrowsTag"
+          }
+        },
+        "name": "ThrowsTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/ThrowsTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/ThrowsTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/ThrowsTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\MethodTag"
+          }
+        },
+        "name": "MethodTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/MethodTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/MethodTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/MethodTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\ApiTag"
+          }
+        },
+        "name": "ApiTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/ApiTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/ApiTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/ApiTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\LinkTag"
+          }
+        },
+        "name": "LinkTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/LinkTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/LinkTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/LinkTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\ParamTag"
+          }
+        },
+        "name": "ParamTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/ParamTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/ParamTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/ParamTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\PackageTag"
+          }
+        },
+        "name": "PackageTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/PackageTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/PackageTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/PackageTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\CopyrightTag"
+          }
+        },
+        "name": "CopyrightTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/CopyrightTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/CopyrightTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/CopyrightTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\UsesTag"
+          }
+        },
+        "name": "UsesTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/UsesTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/UsesTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/UsesTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\VarTag"
+          }
+        },
+        "name": "VarTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/VarTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/VarTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/VarTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\AuthorTag"
+          }
+        },
+        "name": "AuthorTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/AuthorTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/AuthorTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/AuthorTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\PropertyTag"
+          }
+        },
+        "name": "PropertyTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/PropertyTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/PropertyTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/PropertyTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\ReturnTag"
+          }
+        },
+        "name": "ReturnTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/ReturnTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/ReturnTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/ReturnTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\GeneratedTag"
+          }
+        },
+        "name": "GeneratedTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/GeneratedTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/GeneratedTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/GeneratedTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\SinceTag"
+          }
+        },
+        "name": "SinceTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/SinceTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/SinceTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/SinceTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\DocBlock\\Tags\\Psr19\\DeprecatedTag"
+          }
+        },
+        "name": "DeprecatedTag",
+        "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+        "file": "src\/DocBlock\/Tags\/Psr19\/DeprecatedTag.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Psr19\/DeprecatedTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Psr19",
+    "file": "src\/DocBlock\/Tags\/Psr19\/DeprecatedTag.php",
+    "uses": {
+      "Tag": "Lsr\\Doc\\DocBlock\\Tags\\Tag"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Doxygen\/PostTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Doxygen",
+    "file": "src\/DocBlock\/Tags\/Doxygen\/PostTag.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Doxygen\/WarningTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Doxygen",
+    "file": "src\/DocBlock\/Tags\/Doxygen\/WarningTag.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Doxygen\/PreTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Doxygen",
+    "file": "src\/DocBlock\/Tags\/Doxygen\/PreTag.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/DocBlock\/Tags\/Doxygen\/AttentionTag.php",
+    "namespace": "Lsr\\Doc\\DocBlock\\Tags\\Doxygen",
+    "file": "src\/DocBlock\/Tags\/Doxygen\/AttentionTag.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Symbols\\SymbolInterface"
+          }
+        },
+        "name": "SymbolInterface",
+        "namespace": "Lsr\\Doc\\Symbols",
+        "file": "src\/Symbols\/SymbolInterface.php",
+        "class": "Lsr\\Doc\\Symbols\\InterfaceSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Symbols\/SymbolInterface.php",
+    "namespace": "Lsr\\Doc\\Symbols",
+    "file": "src\/Symbols\/SymbolInterface.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Symbols\\InterfaceSymbol"
+          }
+        },
+        "name": "InterfaceSymbol",
+        "namespace": "Lsr\\Doc\\Symbols",
+        "file": "src\/Symbols\/InterfaceSymbol.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Symbols\/InterfaceSymbol.php",
+    "namespace": "Lsr\\Doc\\Symbols",
+    "file": "src\/Symbols\/InterfaceSymbol.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Symbols\\SymbolMap"
+          },
+          "doc-block": [
+            {
+              "name": "brief",
+              "value": "A structure containing all symbols"
+            },
+            {
+              "name": "details",
+              "value": "Should be used to look up all symbols by their name.\nThis structure stores symbols in an associative array.\nSymbols are searchable by their identifier.\n- File symbol's identifier is its filename\n- Function\/Method symbol's identifier ends with \"()\""
+            }
+          ]
+        },
+        "name": "SymbolMap",
+        "namespace": "Lsr\\Doc\\Symbols",
+        "file": "src\/Symbols\/SymbolMap.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Symbols\/SymbolMap.php",
+    "namespace": "Lsr\\Doc\\Symbols",
+    "file": "src\/Symbols\/SymbolMap.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Symbols\\FunctionSymbol"
+          }
+        },
+        "name": "FunctionSymbol",
+        "namespace": "Lsr\\Doc\\Symbols",
+        "file": "src\/Symbols\/FunctionSymbol.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Symbols\/FunctionSymbol.php",
+    "namespace": "Lsr\\Doc\\Symbols",
+    "file": "src\/Symbols\/FunctionSymbol.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Symbols\/Symbol.php",
+    "namespace": "Lsr\\Doc\\Symbols",
+    "file": "src\/Symbols\/Symbol.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Symbols\\TraitSymbol"
+          }
+        },
+        "name": "TraitSymbol",
+        "namespace": "Lsr\\Doc\\Symbols",
+        "file": "src\/Symbols\/TraitSymbol.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Symbols\/TraitSymbol.php",
+    "namespace": "Lsr\\Doc\\Symbols",
+    "file": "src\/Symbols\/TraitSymbol.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Symbols\\FileSymbol"
+          }
+        },
+        "name": "FileSymbol",
+        "namespace": "Lsr\\Doc\\Symbols",
+        "file": "src\/Symbols\/FileSymbol.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Symbols\/FileSymbol.php",
+    "namespace": "Lsr\\Doc\\Symbols",
+    "file": "src\/Symbols\/FileSymbol.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Symbols\\ClassSymbol"
+          }
+        },
+        "name": "ClassSymbol",
+        "namespace": "Lsr\\Doc\\Symbols",
+        "file": "src\/Symbols\/ClassSymbol.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": []
+    },
+    "name": "src\/Symbols\/ClassSymbol.php",
+    "namespace": "Lsr\\Doc\\Symbols",
+    "file": "src\/Symbols\/ClassSymbol.php",
+    "uses": [],
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Command"
+          }
+        },
+        "name": "Command",
+        "namespace": "Lsr\\Doc",
+        "file": "src\/Command.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": [
+        [
+          {
+            "name": "var",
+            "value": "PipelineExtension[] $extensions"
+          }
+        ],
+        [
+          {
+            "name": "var",
+            "value": "PipelineBase[] $pipeline"
+          }
+        ],
+        [
+          {
+            "name": "var",
+            "value": "PipelineBase $pipelineA"
+          }
+        ],
+        [
+          {
+            "name": "var",
+            "value": "PipelineBase $pipelineB"
+          }
+        ],
+        [
+          {
+            "name": "var",
+            "value": "PipelineBase $step"
+          }
+        ]
+      ]
+    },
+    "name": "src\/Command.php",
+    "namespace": "Lsr\\Doc",
+    "file": "src\/Command.php",
+    "uses": {
+      "Colors": "Lsr\\Doc\\CliTools\\Colors",
+      "ForegroundColors": "Lsr\\Doc\\CliTools\\Enums\\ForegroundColors",
+      "TextAttributes": "Lsr\\Doc\\CliTools\\Enums\\TextAttributes",
+      "CliArguments": "Lsr\\Doc\\Config\\CliArguments",
+      "Config": "Lsr\\Doc\\Config\\Config",
+      "ConfigFile": "Lsr\\Doc\\Config\\ConfigFile",
+      "Configurator": "Lsr\\Doc\\Config\\Configurator",
+      "ConfigurationException": "Lsr\\Doc\\Exceptions\\ConfigurationException",
+      "PipelineExtension": "Lsr\\Doc\\Extensions\\PipelineExtension",
+      "PipelineBase": "Lsr\\Doc\\Pipeline\\PipelineBase",
+      "FileScanner": "Lsr\\Doc\\Scan\\FileScanner",
+      "SymbolExtractor": "Lsr\\Doc\\Scan\\SymbolExtractor",
+      "Cache": "Lsr\\Doc\\Services\\Cache",
+      "FileSymbol": "Lsr\\Doc\\Symbols\\FileSymbol",
+      "SymbolMap": "Lsr\\Doc\\Symbols\\SymbolMap",
+      "RobotLoader": "Nette\\Loaders\\RobotLoader"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  },
+  {
+    "symbols": [
+      {
+        "symbols": [],
+        "metadata": {
+          "reflection": {
+            "name": "Lsr\\Doc\\Services\\Cache"
+          }
+        },
+        "name": "Cache",
+        "namespace": "Lsr\\Doc\\Services",
+        "file": "src\/Services\/Cache.php",
+        "class": "Lsr\\Doc\\Symbols\\ClassSymbol"
+      }
+    ],
+    "metadata": {
+      "doc-blocks": [
+        [
+          {
+            "name": "noinspection",
+            "value": "UnserializeExploitsInspection"
+          }
+        ]
+      ]
+    },
+    "name": "src\/Services\/Cache.php",
+    "namespace": "Lsr\\Doc\\Services",
+    "file": "src\/Services\/Cache.php",
+    "uses": {
+      "InvalidArgumentException": "InvalidArgumentException",
+      "Config": "Lsr\\Doc\\Config\\Config",
+      "FileException": "Lsr\\Doc\\Exceptions\\FileException",
+      "trailingSlashIt()": "Lsr\\Doc\\trailingSlashIt()"
+    },
+    "class": "Lsr\\Doc\\Symbols\\FileSymbol"
+  }
+]
